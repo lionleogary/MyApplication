@@ -19,6 +19,15 @@
         <activity android:name=".Bir">
 
         </activity>
+        <activity android:name=".Bmi">
+
+        </activity>
+        <activity android:name=".Bsa">
+
+        </activity>
+        <activity android:name=".Ibw">
+
+        </activity>
     </application>
 
 </manifest>

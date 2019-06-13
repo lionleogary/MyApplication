@@ -29,10 +29,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void Bsa(View v){
         Intent intent=new Intent(this,Bsa.class);
+        Bundle bundle=new Bundle();
+        int bh=Integer.parseInt(height.getText().toString());
+        int bw=Integer.parseInt(weight.getText().toString());
+        bundle.putInt("bh",bh);
+        bundle.putInt("bw",bw);
+        intent.putExtras(bundle);
         startActivity(intent);
 
     }
-    public void Bmi(View v){
+    public void ibw(View v){
+        Intent intent=new Intent(this,Ibw.class);
+        Bundle bundle=new Bundle();
+        int bh=Integer.parseInt(height.getText().toString());
+        int bw=Integer.parseInt(weight.getText().toString());
+        String em=email.getText().toString();
+        String nam=name.getText().toString();
+        bundle.putString("name",nam);
+        bundle.putInt("bh",bh);
+        bundle.putInt("bw",bw);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
+    public void Bir(View v){
         Intent intent=new Intent(this,Bir.class);
         Bundle bundle=new Bundle();
         int bh=Integer.parseInt(height.getText().toString());
@@ -41,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         String nam=name.getText().toString();
         bundle.putString("name",nam);
         bundle.putInt("bh",bh);
+        bundle.putInt("bw",bw);
         intent.putExtras(bundle);
         startActivity(intent);
     }
