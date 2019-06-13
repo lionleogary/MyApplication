@@ -12,6 +12,7 @@ import java.text.NumberFormat;
 public class Bir extends AppCompatActivity{
     private EditText hei;
     private EditText wei;
+    private EditText age;
 
     private TextView tt;
     @Override
@@ -20,6 +21,8 @@ public class Bir extends AppCompatActivity{
         setContentView(R.layout.bir);
         hei=findViewById(R.id.height);
         wei=findViewById(R.id.editText5);
+        age=findViewById(R.id.editText6);
+        tt=findViewById(R.id.textView12);
         show();
 
 
@@ -28,11 +31,14 @@ public class Bir extends AppCompatActivity{
     public void show ( ){
         NumberFormat nf=NumberFormat.getInstance();
         Bundle bundle=getIntent().getExtras();
-        int bh=bundle.getInt("bh");
+        double bh=bundle.getInt("bh");
         int bw=bundle.getInt("bw");
-
+        int aa=bundle.getInt("aa");
+        double bb=(double)bw/(double)bh/(double)bh*10000;
         hei.setText(nf.format(bh));
         wei.setText(nf.format(bw));
+        age.setText(nf.format(aa));
+        tt.setText("bmi"+nf.format(bb));
 
     }
     public void Bmi(View v){

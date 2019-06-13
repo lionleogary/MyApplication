@@ -17,10 +17,10 @@ public class Ibw extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bsa);
-        hei=findViewById(R.id.heightibw);
-        wei=findViewById(R.id.heightibw);
-        //show();
+        setContentView(R.layout.ibw2);
+        hei=findViewById(R.id.editText9);
+        wei=findViewById(R.id.editText10);
+        show();
 
 
     }
@@ -29,7 +29,6 @@ public class Ibw extends AppCompatActivity {
         Bundle bundle=getIntent().getExtras();
         int bh=bundle.getInt("bh");
         int bw=bundle.getInt("bw");
-
         hei.setText(nf.format(bh));
         wei.setText(nf.format(bw));
 
